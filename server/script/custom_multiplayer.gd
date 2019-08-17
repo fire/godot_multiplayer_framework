@@ -7,8 +7,8 @@
 ### multiplayer.[network_stuff] (which internally calls get_tree() if no custom
 ### multiplayer is specified).
 
-### This node will apply a custom Multliplayer API instance (or RPC manager
-### if you like) to all its childern, and manage them as INDEPENDENT branches
+### This node will apply a custom Multiplayer API instance (or RPC manager
+### if you like) to all its children, and manage them as INDEPENDENT branches
 ### in regards to RPCs/RSETs purpose
 extends Node
 
@@ -16,7 +16,7 @@ func _init():
 	# First, we assign a new MultiplayerAPI to our this node
 	custom_multiplayer = MultiplayerAPI.new()
 	# Then we need to specify that this will be the root node for this custom
-	# MultlpayerAPI, so that all path references will be relative to this one
+	# MultiplayerAPI, so that all path references will be relative to this one
 	# and only its children will be affected by RPCs/RSETs
 	custom_multiplayer.set_root_node(self)
 
@@ -62,7 +62,7 @@ func _on_add_node(node):
 	# Let's apply to it our own custom multiplayer
 	node.custom_multiplayer = custom_multiplayer
 
-# This function customize all the child nodes added when the scene is instanced
+# This function customizes all the child nodes added when the scene is instanced
 func _customize_children():
 	# Remember to mind the stack ;-)
 	# We use a frontier to avoid recursion.
