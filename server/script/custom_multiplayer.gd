@@ -1,9 +1,9 @@
-### This small demo demostrate how to use the new MultiplayerAPI class
+### This small demo demonstrates how to use the new MultiplayerAPI class
 ### to run both server and client(s) in the same instance.
 ### This is very useful for testing and in cases where you want to
-### always run a server even when playing locally (like good ol Quake III did)
+### always run a server even when playing locally (like Quake III did)
 ### IMPORTANT: You need to replace all the get_tree().[network_stuff] (which
-### will be deprected in 3.1, and removed in later releases) with:
+### will be deprecated in 3.1, and removed in later releases) with:
 ### multiplayer.[network_stuff] (which internally calls get_tree() if no custom
 ### multiplayer is specified).
 
